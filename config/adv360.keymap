@@ -26,7 +26,7 @@
         AltGr: AltGr {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_CONTROL &kp RIGHT_ALT>;
+            bindings = <&mt LALT LALT &mt RCTRL RCTRL>;
             label = "ALTGR";
         };
     };
