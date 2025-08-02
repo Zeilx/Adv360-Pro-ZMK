@@ -20,15 +20,6 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-
-        alt_gr: alt_gr {
-            compatible = "zmk,behavior-hold-tap";
-            label = "ALT_GR";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mt>;
-        };
     };
 
     keymap {
