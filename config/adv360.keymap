@@ -22,17 +22,27 @@
         };
     };
 
+    macros {
+        AltGr: AltGr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp RIGHT_CONTROL &kp RIGHT_ALT>;
+
+            label = "ALTGR";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp DA_N1  &kp DA_N2  &kp DA_N3  &kp DA_N4  &kp N5    &tog 1                                                   &mo 3      &kp DA_N6  &kp DA_N7  &kp DA_N8  &kp DA_N9  &kp DA_N0  &kp MINUS
-&kp TAB    &kp DA_Q   &kp DA_W   &kp DA_E   &kp DA_R   &kp DA_T  &none                                                    &none      &kp DA_Y   &kp DA_U   &kp DA_I   &kp DA_O   &kp DA_P   &kp LS(DA_A_RING)
-&kp ESC    &kp DA_A   &kp DA_S   &kp DA_D   &kp DA_F   &kp DA_G  &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp DA_H   &kp DA_J   &kp DA_K   &kp DA_L   &kp DA_AE  &kp LS(DA_O_SLASH)
-&kp LSHFT  &kp DA_Z   &kp DA_X   &kp DA_C   &kp DA_V   &kp DA_B                       &kp HOME      &kp PG_UP                        &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS   &kp LEFT   &kp RIGHT            &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE             &kp UP     &kp DOWN   &kp LBKT   &kp RBKT   &mo 2
+&kp DA_FRAC_1_2   &kp DA_N1            &kp DA_N2              &kp DA_N3  &kp DA_N4  &kp N5    &tog 1                                                   &mo 3      &kp DA_N6  &kp DA_N7  &kp DA_N8     &kp DA_N9               &kp DA_N0              &kp DA_PLUS
+&kp TAB           &kp DA_Q             &kp DA_W               &kp DA_E   &kp DA_R   &kp DA_T  &none                                                    &none      &kp DA_Y   &kp DA_U   &kp DA_I      &kp DA_O                &kp DA_P               &kp LS(DA_A_RING)
+&kp ESC           &hm LEFT_SHIFT DA_A  &hm LEFT_CONTROL DA_S  &kp DA_D   &kp DA_F   &kp DA_G  &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp DA_H   &kp DA_J   &kp DA_K      &hm RIGHT_CONTROL DA_L  &hm RIGHT_SHIFT DA_AE  &kp LS(DA_O_SLASH)
+&kp DA_LESS_THAN  &kp DA_Z             &kp DA_X               &kp DA_C   &kp DA_V   &kp DA_B                       &kp HOME      &kp PG_UP                        &kp N      &kp M      &kp DA_COMMA  &kp DA_DOT              &kp DA_MINUS           &kp DA_STAR
+&mo 2             &kp GRAVE            &AltGr                 &kp LEFT   &kp RIGHT            &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE             &kp UP     &kp DOWN      &kp DA_UMLAUT           &kp DA_ACUTE           &mo 2
             >;
         };
 
