@@ -26,8 +26,7 @@
         AltGr: AltGr {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp RIGHT_CONTROL &kp RIGHT_ALT>;
-
+            bindings = <&kp RIGHT_CONTROL &kp RIGHT_ALT>;
             label = "ALTGR";
         };
     };
